@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    width: 100%;
+    height: 100%;
+}
+.gameScreen{
+    display: grid;
+    grid-template-columns: repeat(15,1fr);
+    grid-template-rows: repeat(15,1fr);
+    height: 100vh;
+    width: 100%;
+    /* overflow-y: hidden; */
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    
+}
