@@ -20,7 +20,10 @@ div{
     grid-template-rows: repeat(15,1fr);
     /* overflow-y: hidden; */
 }
-
+.baicsDiv:hover{
+    border: 1px solid #fff;
+    cursor: pointer;
+}
 img{
     width: 100%;
     height: 100%;
@@ -28,4 +31,22 @@ img{
 
 .tools{
     background-color: #3a3031;
+}
+.tools div.imgToolsContainer{
+    height: auto;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+.tools div.imgToolsContainer p.textImgFloat
+{
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-size: 21px;
+}
+.tools div.imgToolsContainer img{
+    width: 30%;
+    height: auto;
+    cursor: pointer;
 }
