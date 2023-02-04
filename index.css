@@ -50,3 +50,11 @@ img{
     height: auto;
     cursor: pointer;
 }
+
+.yellowBox{
+    background-color: yellow;
+    width: 3vw;
+    height: 3vw;
+    margin: 0px auto;
+
+}

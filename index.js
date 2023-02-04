@@ -73,6 +73,17 @@ for (let row = 0; row < 15; row++) {
                     children.innerHTML = Number(children.innerHTML) + 1;
                     // console.log("divChangeVal", children.innerHTML);
                     break;
+                    case event.target.className.includes("yellowBoxs") && 3:
+                        debugger;
+                        newDiv = document.createElement("div");
+                        newDiv.style.backgroundColor = "#96d6f2";
+                        baicsDiv.appendChild(newDiv);
+                        const yellowBox = document.getElementsByClassName("imgToolsContainer").item(9);
+                        changeImg = baicsDiv.children.item(0).remove();
+                        children = yellowBox.children.item(1);
+                        children.innerHTML = Number(children.innerHTML) + 1;
+                        // console.log("divChangeVal", children.innerHTML);
+                        break;
                 default:
                     break;
             }
@@ -90,6 +101,7 @@ for (let row = 0; row < 15; row++) {
         else if (col <= yllowBlock - 2 && row <= yllowBlock - 2) {
             let div = document.createElement("div");
             div.style.backgroundColor = "yellow";
+            div.classList.add("yellowBoxs")
             baicsDiv.appendChild(div);
             baicsDiv.style.gridColumn = col + 1;
             baicsDiv.style.gridRow = row + 1;
@@ -150,13 +162,29 @@ for (let row = 0; row < 15; row++) {
 
 
 const tools = document.querySelector(".tools");
-const arr = ["/assets/images/664112.png", "/assets/images/Iron_Shovel_25718.png", "/assets/images/pngkit_minecraft-pickaxe-png_1516343.png", "/assets/images/SeekPng.com_bullet-fire-png_3253322.png", "/assets/images/Convite Minecraft_ modelos e artes grátis para editar e enviar no Whats.png", "/assets/images/Dirt Survival Minecraft Server.jfif", "/assets/images/Geeks, Nerds, Gamers - 24 designs  by joyfulrose.png", "/assets/images/Spoonflower.jfif", "/assets/images/Oak Block Fabric.png"]
+const arr = ["/assets/images/664112.png", "/assets/images/Iron_Shovel_25718.png", "/assets/images/pngkit_minecraft-pickaxe-png_1516343.png", "/assets/images/SeekPng.com_bullet-fire-png_3253322.png", "/assets/images/Convite Minecraft_ modelos e artes grátis para editar e enviar no Whats.png", "/assets/images/Dirt Survival Minecraft Server.jfif", "/assets/images/Geeks, Nerds, Gamers - 24 designs  by joyfulrose.png", "/assets/images/Spoonflower.jfif", "/assets/images/Oak Block Fabric.png", '']
 
 for (let i = 0; i < arr.length; i++) {
     const element = arr[i];
     let div = document.createElement("div");
     div.classList.add("imgToolsContainer");
     let img = document.createElement("img");
+    if (i == arr.length -1) {
+        let p = document.createElement("p")
+        p.classList.add("textImgFloat");
+        p.innerText = 0;
+        let div2 = document.createElement("div");
+        div2.classList.add("yellowBox");
+        div2.value = arr.length - 1;
+        div.appendChild(div2);
+        div.appendChild(p);
+        tools.appendChild(div);
+        div.addEventListener("click", (event) => {
+            console.log(event.target.value);
+            sessionStorage.setItem("kindImg", JSON.stringify(event.target.value));
+        });
+        break
+    }
     if (i >= 4) {
         let p = document.createElement("p")
         p.classList.add("textImgFloat");
@@ -165,6 +193,7 @@ for (let i = 0; i < arr.length; i++) {
     }
     img.src = element
     img.value = i;
+
     div.addEventListener("click", (event) => {
         console.log(event.target.value);
         sessionStorage.setItem("kindImg", JSON.stringify(event.target.value));
@@ -172,4 +201,5 @@ for (let i = 0; i < arr.length; i++) {
     div.appendChild(img);
     tools.appendChild(div);
 }
+
 
