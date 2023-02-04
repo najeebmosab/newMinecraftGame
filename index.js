@@ -1,9 +1,10 @@
 const gameScreen = document.querySelector(".gameScreen");
-const Convite = "/assets/images/Convite Minecraft_ modelos e artes grátis para editar e enviar no Whats.png"
-const woodImg = "/assets/images/Oak Block Fabric.png"
-const gras = "/assets/images/Geeks, Nerds, Gamers - 24 designs  by joyfulrose.png"
-const flot = "/assets/images/Dirt Survival Minecraft Server.jfif"
-const Spoonflower = "/assets/images/Spoonflower.jfif"
+const Convite = "/assets/images/Convite Minecraft_ modelos e artes grátis para editar e enviar no Whats.png";
+const woodImg = "/assets/images/Oak Block Fabric.png";
+const gras = "/assets/images/Geeks, Nerds, Gamers - 24 designs  by joyfulrose.png";
+const flot = "/assets/images/Dirt Survival Minecraft Server.jfif";
+const Spoonflower = "/assets/images/Spoonflower.jfif";
+const Refresh = document.querySelector("#Refresh");
 const wood = Math.floor(Math.random() * 15)
 const blockFlot = Math.floor(Math.random() * 15)
 numOfLevel = Math.floor(Math.random() * 3);
@@ -324,4 +325,7 @@ for (let i = 0; i < arr.length; i++) {
     tools.appendChild(div);
 }
 
+Refresh.addEventListener("click",()=>{
+    document.location.reload();
+});
 
