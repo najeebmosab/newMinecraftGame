@@ -43,6 +43,16 @@ for (let row = 0; row < 15; row++) {
                     children.innerHTML = Number(children.innerHTML) + 1;
                     // console.log("divChangeVal", children.innerHTML);
                     break;
+                case event.target.className.includes("flot") && 1:
+                    newDiv = document.createElement("div");
+                    newDiv.style.backgroundColor = "#96d6f2";
+                    baicsDiv.appendChild(newDiv);
+                    const flot  = document.getElementsByClassName("imgToolsContainer").item(5);
+                    changeImg = baicsDiv.children.item(0).remove();
+                    children = flot.children.item(0);
+                    children.innerHTML = Number(children.innerHTML) + 1;
+                    // console.log("divChangeVal", children.innerHTML);
+                    break;
                 default:
                     break;
             }
