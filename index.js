@@ -22,6 +22,7 @@ for (let row = 0; row < 15; row++) {
             const val = JSON.parse(sessionStorage.getItem("kindImg"));
             let changeImg;
             let children
+            let temp;
             switch (val) {
                 case event.target.className.includes("Spoonflower") && 0:
                     newDiv = document.createElement("div");
@@ -73,17 +74,138 @@ for (let row = 0; row < 15; row++) {
                     children.innerHTML = Number(children.innerHTML) + 1;
                     // console.log("divChangeVal", children.innerHTML);
                     break;
-                    case event.target.className.includes("yellowBoxs") && 3:
-                        debugger;
-                        newDiv = document.createElement("div");
-                        newDiv.style.backgroundColor = "#96d6f2";
-                        baicsDiv.appendChild(newDiv);
-                        const yellowBox = document.getElementsByClassName("imgToolsContainer").item(9);
-                        changeImg = baicsDiv.children.item(0).remove();
-                        children = yellowBox.children.item(1);
-                        children.innerHTML = Number(children.innerHTML) + 1;
-                        // console.log("divChangeVal", children.innerHTML);
+                case event.target.className.includes("yellowBoxs") && 3:
+                    newDiv = document.createElement("div");
+                    newDiv.style.backgroundColor = "#96d6f2";
+                    baicsDiv.appendChild(newDiv);
+                    const yellowBox = document.getElementsByClassName("imgToolsContainer").item(9);
+                    changeImg = baicsDiv.children.item(0).remove();
+                    children = yellowBox.children.item(1);
+                    children.innerHTML = Number(children.innerHTML) + 1;
+                    // console.log("divChangeVal", children.innerHTML);
+                    break;
+                case 4:
+
+                    debugger;
+                    const greenConvite = document.getElementsByClassName("imgToolsContainer").item(4);
+                    children = greenConvite.children.item(0);
+                    temp = Number(children.innerHTML);
+                    if (temp <= 0) {
                         break;
+                    }
+                    else {
+                        changeImg = baicsDiv.children.item(0).remove();
+                        temp -= 1;
+                        children.innerText = temp.toString();
+
+                        let img = document.createElement("img");
+                        img.src = "/assets/images/Convite Minecraft_ modelos e artes grátis para editar e enviar no Whats.png";
+                        img.classList.add("Convite")
+                        baicsDiv.appendChild(img);
+                    }
+                    break;
+
+                case 5:
+
+                    debugger;
+                    const float = document.getElementsByClassName("imgToolsContainer").item(5);
+                    children = float.children.item(0);
+                    temp = Number(children.innerHTML);
+                    if (temp <= 0) {
+                        break;
+                    }
+                    else {
+                        changeImg = baicsDiv.children.item(0).remove();
+                        temp -= 1;
+                        children.innerText = temp.toString();
+
+                        let img = document.createElement("img");
+                        img.src = "/assets/images/Dirt Survival Minecraft Server.jfif";
+                        img.classList.add("flot")
+                        baicsDiv.appendChild(img);
+                    }
+                    break;
+                case 6:
+
+                    debugger;
+                    const gras = document.getElementsByClassName("imgToolsContainer").item(6);
+                    children = gras.children.item(0);
+                    temp = Number(children.innerHTML);
+                    if (temp <= 0) {
+                        break;
+                    }
+                    else {
+                        changeImg = baicsDiv.children.item(0).remove();
+                        temp -= 1;
+                        children.innerText = temp.toString();
+
+                        let img = document.createElement("img");
+                        img.src = "/assets/images/Geeks, Nerds, Gamers - 24 designs  by joyfulrose.png";
+                        img.classList.add("gras")
+                        baicsDiv.appendChild(img);
+                    }
+                    break;
+                case 7:
+
+                    debugger;
+                    const Spoonflower = document.getElementsByClassName("imgToolsContainer").item(7);
+                    children = Spoonflower.children.item(0);
+                    temp = Number(children.innerHTML);
+                    if (temp <= 0) {
+                        break;
+                    }
+                    else {
+                        changeImg = baicsDiv.children.item(0).remove();
+                        temp -= 1;
+                        children.innerText = temp.toString();
+
+                        let img = document.createElement("img");
+                        img.src = "/assets/images/Spoonflower.jfif";
+                        img.classList.add("Spoonflower")
+                        baicsDiv.appendChild(img);
+                    }
+                    break;
+
+                case 8:
+
+                    debugger;
+                    const wood = document.getElementsByClassName("imgToolsContainer").item(8);
+                    children = wood.children.item(0);
+                    temp = Number(children.innerHTML);
+                    if (temp <= 0) {
+                        break;
+                    }
+                    else {
+                        changeImg = baicsDiv.children.item(0).remove();
+                        temp -= 1;
+                        children.innerText = temp.toString();
+
+                        let img = document.createElement("img");
+                        img.src = "/assets/images/Oak Block Fabric.png";
+                        img.classList.add("woodImg")
+                        baicsDiv.appendChild(img);
+                    }
+                    break;
+                case 9:
+
+                    debugger;
+                    const sun = document.getElementsByClassName("imgToolsContainer").item(9);
+                    children = sun.children.item(1);
+                    temp = Number(children.innerHTML);
+                    if (temp <= 0) {
+                        break;
+                    }
+                    else {
+                        changeImg = baicsDiv.children.item(0).remove();
+                        temp -= 1;
+                        children.innerText = temp.toString();
+
+                        let div = document.createElement("div");
+                        div.style.backgroundColor = "yellow";
+                        div.classList.add("yellowBoxs")
+                        baicsDiv.appendChild(div);
+                    }
+                    break;
                 default:
                     break;
             }
@@ -169,7 +291,7 @@ for (let i = 0; i < arr.length; i++) {
     let div = document.createElement("div");
     div.classList.add("imgToolsContainer");
     let img = document.createElement("img");
-    if (i == arr.length -1) {
+    if (i == arr.length - 1) {
         let p = document.createElement("p")
         p.classList.add("textImgFloat");
         p.innerText = 0;
