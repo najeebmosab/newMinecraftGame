@@ -47,9 +47,29 @@ for (let row = 0; row < 15; row++) {
                     newDiv = document.createElement("div");
                     newDiv.style.backgroundColor = "#96d6f2";
                     baicsDiv.appendChild(newDiv);
-                    const flot  = document.getElementsByClassName("imgToolsContainer").item(5);
+                    const flot = document.getElementsByClassName("imgToolsContainer").item(5);
                     changeImg = baicsDiv.children.item(0).remove();
                     children = flot.children.item(0);
+                    children.innerHTML = Number(children.innerHTML) + 1;
+                    // console.log("divChangeVal", children.innerHTML);
+                    break;
+                case event.target.className.includes("Convite") && 2:
+                    newDiv = document.createElement("div");
+                    newDiv.style.backgroundColor = "#96d6f2";
+                    baicsDiv.appendChild(newDiv);
+                    const Convite = document.getElementsByClassName("imgToolsContainer").item(4);
+                    changeImg = baicsDiv.children.item(0).remove();
+                    children = Convite.children.item(0);
+                    children.innerHTML = Number(children.innerHTML) + 1;
+                    // console.log("divChangeVal", children.innerHTML);
+                    break;
+                case event.target.className.includes("woodImg") && 2:
+                    newDiv = document.createElement("div");
+                    newDiv.style.backgroundColor = "#96d6f2";
+                    baicsDiv.appendChild(newDiv);
+                    const woodImg = document.getElementsByClassName("imgToolsContainer").item(8);
+                    changeImg = baicsDiv.children.item(0).remove();
+                    children = woodImg.children.item(0);
                     children.innerHTML = Number(children.innerHTML) + 1;
                     // console.log("divChangeVal", children.innerHTML);
                     break;
@@ -130,7 +150,7 @@ for (let row = 0; row < 15; row++) {
 
 
 const tools = document.querySelector(".tools");
-const arr = ["/assets/images/664112.png", "/assets/images/Iron_Shovel_25718.png", "/assets/images/pngkit_minecraft-pickaxe-png_1516343.png", "/assets/images/SeekPng.com_bullet-fire-png_3253322.png", "/assets/images/Convite Minecraft_ modelos e artes grátis para editar e enviar no Whats.png", "/assets/images/Dirt Survival Minecraft Server.jfif", "/assets/images/Geeks, Nerds, Gamers - 24 designs  by joyfulrose.png", "/assets/images/Spoonflower.jfif"]
+const arr = ["/assets/images/664112.png", "/assets/images/Iron_Shovel_25718.png", "/assets/images/pngkit_minecraft-pickaxe-png_1516343.png", "/assets/images/SeekPng.com_bullet-fire-png_3253322.png", "/assets/images/Convite Minecraft_ modelos e artes grátis para editar e enviar no Whats.png", "/assets/images/Dirt Survival Minecraft Server.jfif", "/assets/images/Geeks, Nerds, Gamers - 24 designs  by joyfulrose.png", "/assets/images/Spoonflower.jfif", "/assets/images/Oak Block Fabric.png"]
 
 for (let i = 0; i < arr.length; i++) {
     const element = arr[i];
